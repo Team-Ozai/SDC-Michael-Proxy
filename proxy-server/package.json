@@ -2,16 +2,16 @@
   "name": "proxy-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "DEBUG=server:startup nodemon"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
     "cors": "^2.8.5",
+    "debug": "^4.1.1",
     "express": "^4.17.1",
     "nodemon": "^2.0.4"
   }
