@@ -1,0 +1,39 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:navbar": "yarn --cwd 'navbar' install",
+    "install:oh-service": "yarn --cwd 'oh-service' install",
+    "install:pledge-rewards": "yarn --cwd 'pledge-rewards' install",
+    "install:va-service": "yarn --cwd 'va-service' install",
+    "install:wwl-service": "yarn --cwd 'wwl---service' install",
+    "install:proxy-server": "yarn --cwd 'proxy-server' install",
+    "installAll": "npm-run-all --parallel install:*",
+    "start:navbar": "ttab -t 'Navbar Service' yarn --cwd 'navbar' start",
+    "start:oh-service": "ttab -t 'OH Service' yarn --cwd 'oh-service' start",
+    "start:pledge-rewards": "ttab -t 'Rewards Service' yarn --cwd 'pledge-rewards' start",
+    "start:va-service": "ttab -t 'VA Service' yarn --cwd 'va-service' start",
+    "start:wwl-service": "ttab -t 'WWL Service' yarn --cwd 'wwl---service' start",
+    "start:proxy-server": "ttab -t 'Proxy Server' yarn --cwd 'proxy-server' start",
+    "startAll": "npm-run-all --sequential start:*"
+  },
+  "private": true,
+  "workspaces": ["navbar", "oh-serice", "pledge-rewards", "proxy-server", "VA-service", "WWL---Service"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/team-iroh/za-proxy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/team-iroh/za-proxy/issues"
+  },
+  "homepage": "https://github.com/team-iroh/za-proxy#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "ttab": "^0.6.1"
+  }
+}
