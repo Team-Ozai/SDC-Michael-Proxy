@@ -3,17 +3,71 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <title>Kickstarter</title>
     <link href="http://localhost:3005/main.css" rel="stylesheet" />
   </head>
-  <body>
+  <body style="height: 100vh; overflow: scroll;">
+    <!-- Navbar Service -->
     <div id="navbar"></div>
-    <div id="rewards"></div>
+    <div id="app-container-proxy">
+      <!--VA Service-->
+      <div id="app"></div>
+
+      <div id="tabbar"></div>
+
+      <div style="display: grid; grid-template-columns: 80% 20%;">
+
+        <div>
+          <!-- WWL - Service -->
+          <div id="root"></div>
+
+          <!-- OH - Service -->
+          <div id="campaign" style="display: none"></div>
+        </div>
+
+        <!-- Rewards Service -->
+        <div
+          id="rewards"
+          style="
+            position: sticky;
+            top: 40px;
+            right: 66px;
+            height: 100%;
+            overflow: hidden;
+            overflow-y: scroll;
+            height: 95vh;
+            padding-bottom: 20px;
+            padding-left: 60px;
+          "
+        ></div>
+      </div>
+    </div>
+
+    <!-- Modal Service -->
     <div id="modal-root"></div>
+
+    <!-- WWL Service-->
+    <script src="http://localhost:3001/main.js" type="text/javascript"></script>
+
+    <!-- VA Service -->
+    <script
+      src="http://localhost:3002/bundle.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- OH Service -->
+    <script
+      src="http://localhost:3003/bundle.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- Rewards Service -->
     <script
       src="http://localhost:3005/bundle.js"
       type="text/javascript"
     ></script>
+
+    <!-- Navbar Service -->
     <script
       src="http://localhost:3006/bundle.js"
       type="text/javascript"

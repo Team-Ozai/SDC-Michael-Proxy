@@ -10,14 +10,32 @@
     "install:va-service": "yarn --cwd 'va-service' install",
     "install:wwl-service": "yarn --cwd 'wwl---service' install",
     "install:proxy-server": "yarn --cwd 'proxy-server' install",
-    "installAll": "npm-run-all --parallel install:*",
-    "start:navbar": "ttab -t 'Navbar Service' yarn --cwd 'navbar' start",
-    "start:oh-service": "ttab -t 'OH Service' yarn --cwd 'oh-service' start",
-    "start:pledge-rewards": "ttab -t 'Rewards Service' yarn --cwd 'pledge-rewards' start",
-    "start:va-service": "ttab -t 'VA Service' yarn --cwd 'va-service' start",
-    "start:wwl-service": "ttab -t 'WWL Service' yarn --cwd 'wwl---service' start",
-    "start:proxy-server": "ttab -t 'Proxy Server' yarn --cwd 'proxy-server' start",
-    "startAll": "npm-run-all --sequential start:*"
+    "install:all": "npm-run-all --parallel install:*",
+
+    "start:navbar": "yarn --cwd 'navbar' start",
+    "start:oh-service": "yarn --cwd 'oh-service' start",
+    "start:pledge-rewards": "yarn --cwd 'pledge-rewards' start",
+    "start:va-service": "yarn --cwd 'va-service' start",
+    "start:wwl-service": "yarn --cwd 'wwl---service' start",
+    "start:proxy-server": "yarn --cwd 'proxy-server' start",
+    "start:all": "npm-run-all --sequential start:*",
+
+    "seed:oh-service": "yarn --cwd 'oh-service' seed:db",
+    "seed:pledge-rewards": "yarn --cwd 'pledge-rewards' seed:database",
+    "seed:va-service": "yarn --cwd 'va-service' seed",
+    "seed:wwl-service": "yarn --cwd 'wwl---service' db:setup",
+    "seed:all": "stmux -M -- [ \"yarn seed:oh-service\" : \"yarn seed:pledge-rewards\" : \"yarn seed:va-service\" : \"yarn seed:wwl-service\" ]",
+
+
+    "build:navbar": "",
+    "build:oh-service": "",
+    "build:pledge-rewards": "",
+    "build:va-service": "",
+    "build:wwl-service": "",
+    "build:proxy-server": "",
+
+
+    "dev": "stmux -M -- [ \"yarn start:navbar\" : \"yarn start:oh-service\" : \"yarn start:pledge-rewards\" : \"yarn start:va-service\" : \"yarn start:wwl-service\" : \"yarn start:proxy-server\"]"
   },
   "private": true,
   "workspaces": [
@@ -47,6 +65,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
+    "stmux": "^1.8.0",
     "ttab": "^0.6.1"
   }
 }
