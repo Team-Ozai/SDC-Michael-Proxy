@@ -10,9 +10,9 @@
 [submodule "WWL---Service"]
 	path = WWL---Service
 	url = https://github.com/team-iroh/WWL---Service.git
-[submodule "oh-service"]
-	path = oh-service
-	url = https://github.com/team-iroh/oh-service.git
+[submodule "campaign"]
+	path = campaign
+	url = https://github.com/team-iroh/campaign.git
 [submodule "tab-bar"]
 	path = tab-bar
 	url = https://github.com/team-iroh/tab-bar.git
