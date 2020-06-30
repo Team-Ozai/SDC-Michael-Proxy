@@ -6,19 +6,21 @@
   "scripts": {
     "install:navbar": "yarn --cwd 'navbar' install",
     "install:oh-service": "yarn --cwd 'oh-service' install",
+    "install:tab-bar": "yarn --cwd 'tab-bar' install",
     "install:pledge-rewards": "yarn --cwd 'pledge-rewards' install",
     "install:va-service": "yarn --cwd 'va-service' install",
     "install:wwl-service": "yarn --cwd 'wwl---service' install",
     "install:proxy-server": "yarn --cwd 'proxy-server' install",
-    "install:all": "npm-run-all --parallel install:*",
+    "postinstall": "npm-run-all --sequential install:*",
 
     "start:navbar": "yarn --cwd 'navbar' start",
     "start:oh-service": "yarn --cwd 'oh-service' start",
+    "start:tab-bar": "yarn --cwd 'tab-bar' start",
     "start:pledge-rewards": "yarn --cwd 'pledge-rewards' start",
     "start:va-service": "yarn --cwd 'va-service' start",
     "start:wwl-service": "yarn --cwd 'wwl---service' start",
     "start:proxy-server": "yarn --cwd 'proxy-server' start",
-    "start:all": "npm-run-all --sequential start:*",
+    "start:all": "stmux -M -- [ \"yarn start:navbar\" : \"yarn start:oh-service\" : \"yarn start:tab-bar\" : \"yarn start:pledge-rewards\" : \"yarn start:va-service\" : \"yarn start:wwl-service\" : \"yarn start:proxy-server\" ]",
 
     "seed:oh-service": "yarn --cwd 'oh-service' seed:db",
     "seed:pledge-rewards": "yarn --cwd 'pledge-rewards' seed:database",
@@ -26,22 +28,20 @@
     "seed:wwl-service": "yarn --cwd 'wwl---service' db:setup",
     "seed:all": "stmux -M -- [ \"yarn seed:oh-service\" : \"yarn seed:pledge-rewards\" : \"yarn seed:va-service\" : \"yarn seed:wwl-service\" ]",
 
-
-    "build:navbar": "",
-    "build:oh-service": "",
-    "build:pledge-rewards": "",
-    "build:va-service": "",
-    "build:wwl-service": "",
-    "build:proxy-server": "",
-
-
-    "dev": "stmux -M -- [ \"yarn start:navbar\" : \"yarn start:oh-service\" : \"yarn start:pledge-rewards\" : \"yarn start:va-service\" : \"yarn start:wwl-service\" : \"yarn start:proxy-server\"]"
+    "build:navbar": "cd navbar/client && webpack -p --mode production",
+    "build:oh-service": "cd oh-service && webpack -p --mode production",
+    "build:tab-bar": "cd tab-bar/client && webpack -p --mode production",
+    "build:pledge-rewards": "cd pledge-rewards/client && webpack -p --mode production",
+    "build:va-service": "cd VA-Service && webpack -p --mode production",
+    "build:wwl-service": "cd WWL---Service && webpack -p --mode production",
+    "build:all": "stmux -M -- [ \"yarn build:navbar\" : \"yarn build:oh-service\" : \"yarn build:tab-bar\" : \"yarn build:pledge-rewards\" : \"yarn build:va-service\" : \"yarn build:wwl-service\" ]"
   },
   "private": true,
   "workspaces": [
     "navbar",
-    "oh-serice",
-    "pledge-rewards",
+    "oh-service",
+    "tab-bar",
+    "rewards",
     "proxy-server",
     "VA-service",
     "WWL---Service"
@@ -66,6 +66,8 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "stmux": "^1.8.0",
-    "ttab": "^0.6.1"
+    "ttab": "^0.6.1",
+    "webfontloader": "^1.6.28",
+    "webpack": "^4.43.0"
   }
 }

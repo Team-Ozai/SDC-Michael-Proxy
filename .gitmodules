@@ -13,3 +13,6 @@
 [submodule "oh-service"]
 	path = oh-service
 	url = https://github.com/team-iroh/oh-service.git
+[submodule "tab-bar"]
+	path = tab-bar
+	url = https://github.com/team-iroh/tab-bar.git
