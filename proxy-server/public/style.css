@@ -1,0 +1,40 @@
+
+
+.proxy__body {
+  padding: 0;
+}
+
+.proxy__scroll {
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.tab-bar__body {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-gap: 10px;
+}
+
+#tab-bar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+#rewards {
+  position: sticky;
+  top: 40px;
+  right: 66px;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 95vh;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  padding-left: 60px;
+}
+
+#update {
+  display: none;
+}
+

@@ -5,8 +5,9 @@
     <meta charset="UTF-8" />
     <title>Kickstarter</title>
     <link href="http://localhost:3005/main.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body style="height: 100vh; overflow: scroll;">
+  <body class="proxy__body">
     <!-- Navbar Service -->
     <div id="navbar"></div>
     <div id="app-container-proxy">
@@ -15,31 +16,17 @@
 
       <div id="tab-bar"></div>
 
-      <div style="display: grid; grid-template-columns: 80% 20%;">
+      <div class="tab-bar__body">
+        <div class="proxy__scroll">
+          <!-- WWL - Service-->
+          <div id="update"></div>
 
-        <div>
-          <!-- WWL - Service -->
-          <div id="root"></div>
-
-          <!-- OH - Service -->
-          <div id="campaign" style="display: none"></div>
+          <!-- OH - Service-->
+          <div id="campaign"></div>
         </div>
 
         <!-- Rewards Service -->
-        <div
-          id="rewards"
-          style="
-            position: sticky;
-            top: 40px;
-            right: 66px;
-            height: 100%;
-            overflow: hidden;
-            overflow-y: scroll;
-            height: 95vh;
-            padding-bottom: 20px;
-            padding-left: 60px;
-          "
-        ></div>
+        <div id="rewards"></div>
       </div>
     </div>
 
