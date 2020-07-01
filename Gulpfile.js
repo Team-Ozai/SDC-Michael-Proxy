@@ -33,10 +33,14 @@ gulp.task("publish", function (done) {
     "rewards.js",
     "text/javascript"
   );
-  upload("./pledge-rewards/client/dist/main.css", "rewards.css", "text/css");
+  upload(
+    "./pledge-rewards/client/dist/main.css",
+    "rewards.styles.css",
+    "text/css"
+  );
   upload("./tab-bar/client/dist/bundle.js", "tabbar.js", "text/javascript");
   upload("./VA-Service/dist/bundle.js", "banner.js", "text/javascript");
   upload("./WWL---Service/dist/main.js", "updates.js", "text/javascript");
-  upload("./proxy-server/public/style.css", "proxy.css", "text/css");
+  upload("./proxy-server/public/style.css", "proxy.styles.css", "text/css");
   done();
 });
