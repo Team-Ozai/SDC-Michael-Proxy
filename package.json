@@ -32,7 +32,7 @@
     "build:va-service": "cd VA-Service && webpack -p --mode production",
     "build:wwl-service": "cd WWL---Service && webpack -p --mode production",
     "build:proxy-server": "cd proxy-server && gulp minify-css && gulp minify-html",
-    "build:all": "stmux -M -- [ \"npm run build:navbar\" : \"npm run build:campaign\" : \"npm run build:tab-bar\" : \"npm run build:pledge-rewards\" : \"npm run build:va-service\" : \"npm run build:wwl-service\" : \"npm run build:proxy-server\" ]"
+    "build:all": "stmux -M -- [ \"npm run build:navbar\" : \"npm run build:campaign\" : \"npm run build:tab-bar\" : \"npm run build:pledge-rewards\" : \"npm run build:va-service\" : \"npm run build:wwl-service\" : \"npm run build:proxy-server\" ] && gulp publish"
   },
   "private": true,
   "workspaces": [
