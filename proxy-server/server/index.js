@@ -8,7 +8,7 @@ const rewardsServiceRoute =
   'http://ec2-3-133-92-215.us-east-2.compute.amazonaws.com:3005';
 
 const proxyRouter = {
-  'api/banner': 'http://localhost:3002',
+  '/api/banner': 'http://localhost:3002',
   'api/video': 'http://localhost:3002',
   'api/update': 'http://localhost:3001',
   'api/comment': 'http://localhost:3001',
