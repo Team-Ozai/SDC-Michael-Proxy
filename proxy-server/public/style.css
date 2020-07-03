@@ -25,6 +25,10 @@
   border-top: 0.1rem solid rgb(220, 222, 221);
 }
 
+#campaign {
+  padding-top: 40px;
+}
+
 #rewards {
   position: sticky;
   top: 40px;
