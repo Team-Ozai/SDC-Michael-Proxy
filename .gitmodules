@@ -1,18 +1,18 @@
-[submodule "pledge-rewards"]
-	path = pledge-rewards
-	url = https://github.com/team-iroh/pledge-rewards.git
-[submodule "navbar"]
-	path = navbar
-	url = https://github.com/team-iroh/navbar.git
+[submodule "campaign"]
+	path = campaign
+	url = https://github.com/team-iroh/campaign.git
 [submodule "VA-Service"]
 	path = VA-Service
 	url = https://github.com/team-iroh/VA-Service.git
 [submodule "WWL---Service"]
 	path = WWL---Service
 	url = https://github.com/team-iroh/WWL---Service.git
-[submodule "campaign"]
-	path = campaign
-	url = https://github.com/team-iroh/campaign.git
+[submodule "pledge-rewards"]
+	path = pledge-rewards
+	url = https://github.com/team-iroh/pledge-rewards.git
 [submodule "tab-bar"]
 	path = tab-bar
 	url = https://github.com/team-iroh/tab-bar.git
+[submodule "navbar"]
+	path = navbar
+	url = https://github.com/team-iroh/navbar.git
