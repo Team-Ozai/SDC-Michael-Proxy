@@ -4,6 +4,9 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 
+const rewardsServiceRoute =
+  'https://https://ec2-3-133-92-215.us-east-2.compute.amazonaws.com';
+
 const proxyRouter = {
   'api/banner': 'http://localhost:3002',
   'api/video': 'http://localhost:3002',
@@ -12,8 +15,8 @@ const proxyRouter = {
   'api/story': 'http://localhost:3003',
   'api/RisksAndChallenges': 'http://localhost:3003',
   'api/EnvironmentalCommitments': 'http://localhost:3003',
-  'api/projects': 'http://localhost:3005',
-  'api/rewards': 'http://localhost:3005',
+  'api/projects': rewardsServiceRoute,
+  'api/rewards': rewardsServiceRoute,
 };
 
 app.use(express.static(path.join(__dirname, '../dist')));
