@@ -9,7 +9,7 @@
 	url = https://github.com/team-iroh/WWL---Service.git
 [submodule "pledge-rewards"]
 	path = pledge-rewards
-	url = https://github.com/team-iroh/pledge-rewards.git
+	url = https://github.com/Team-Ozai/SDC-Michael-Service.git
 [submodule "tab-bar"]
 	path = tab-bar
 	url = https://github.com/team-iroh/tab-bar.git

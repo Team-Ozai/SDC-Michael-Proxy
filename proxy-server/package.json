@@ -5,7 +5,8 @@
   "main": "server/index.js",
   "scripts": {
     "start": "DEBUG=server:startup nodemon",
-    "build": "gulp minify-css && gulp minify-html"
+    "build": "gulp minify-css && gulp minify-html",
+    "arty": "artillery run -o artyTest.json server/artillery.yml"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "debug": "^4.1.1",
     "express": "^4.17.1",
     "http-proxy-middleware": "^1.0.4",
+    "newrelic": "^6.11.0",
     "nodemon": "^2.0.4"
   },
   "devDependencies": {
